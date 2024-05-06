@@ -1,0 +1,11 @@
+<ng-container *ngIf="data$ | async as data">
+  <ng-container *ngIf="data[0]===true">
+    <app-onboarding></app-onboarding>
+  </ng-container>
+  <ng-container *ngIf="data[1]===true">
+    <app-preview></app-preview>
+  </ng-container>
+  <ng-container *ngIf="data[2]===true">
+    <app-version></app-version>
+  </ng-container>
+</ng-container>

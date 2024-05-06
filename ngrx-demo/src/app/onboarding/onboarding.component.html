@@ -1,0 +1,32 @@
+<div class="text-center">
+  <h1>NgRx Demo</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of response;">
+      <div class="col-md-4 mt-2 mb-2">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>NAME:{{item.name}}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>OPERATION:{{item.operation}}</p>
+            <p>COUNTRY:{{item.country}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              class="btn btn-primary btn-sm"
+              type="button"
+              (click)="onPerviewClicked(item.name)"
+            >Preview</button>&nbsp;&nbsp;
+            <button
+              class="btn btn-danger btn-sm"
+              type="button"
+              (click)="onVersionClicked(item.name)"
+            >Version</button>&nbsp;&nbsp;
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>
